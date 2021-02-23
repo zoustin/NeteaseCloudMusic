@@ -5,7 +5,7 @@ import java.net.URLEncoder;
 
 public class HttpConstants {
 
-	private static final String ROOT_URL = "http://http://139.9.58.224:3000";
+	private static final String ROOT_URL = "http://139.9.58.224:3000";
 
 	static final String LOGIN = ROOT_URL + "/login/cellphone";
 
