@@ -1,6 +1,7 @@
 package com.imooc.lib_audio.app;
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Context;
 
 import com.imooc.lib_audio.mediaplayer.core.AudioController;
@@ -13,9 +14,12 @@ import java.util.ArrayList;
 //唯一与外界通信的类
 public final class AudioHelper {
 
-	private static Context mContext;
+	/**
+	 * 使用Application的生命周期，防止内存泄漏
+	 */
+	private static Application mContext;
 
-	public static void init(Context context){
+	public static void init(Application context){
 		mContext = context;
 		MusicService.startMusicService();
 	}
